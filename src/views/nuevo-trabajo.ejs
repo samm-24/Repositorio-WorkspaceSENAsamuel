@@ -1,0 +1,287 @@
+<%- include('partials/head', { title: 'DISICO | Nuevo trabajo' }) %>
+
+<%- include('partials/navigation') %>
+
+<main class="dashboard-page">
+
+    <div class="dashboard-container">
+
+        <a href="/area-trabajos" class="back-button">
+
+            <i class="bi bi-arrow-left"></i>
+
+            Volver
+
+        </a>
+
+
+        <div class="page-title">
+
+            <span class="section-tag">
+                NUEVO REGISTRO
+            </span>
+
+            <h1>
+                Área de trabajos
+            </h1>
+
+        </div>
+
+
+        <!-- LOGO / IMAGEN -->
+
+        <div class="dashboard-image small-image">
+
+            <img
+                src="/images/disico-trabajos.jpg"
+                alt="DISICO"
+            >
+
+        </div>
+
+
+        <!-- USUARIO -->
+
+        <div class="info-card">
+
+            <div class="info-card-icon">
+
+                <i class="bi bi-person-circle"></i>
+
+            </div>
+
+            <div>
+
+                <h3>
+                    Información del usuario
+                </h3>
+
+                <p>
+                    <strong>Samuel Caicedo</strong>
+                </p>
+
+                <p>
+                    CC: 1244893
+                </p>
+
+                <p>
+                    Rol: Colaborador
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- FOTOS -->
+
+        <section class="photos-section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    EVIDENCIA
+                </span>
+
+                <h2>
+                    Fotografías del trabajo
+                </h2>
+
+            </div>
+
+
+            <div class="file-selector">
+
+                <label
+                    for="photoInput"
+                    class="btn btn-primary"
+                >
+
+                    <i class="bi bi-camera-fill"></i>
+
+                    Seleccionar foto
+
+                </label>
+
+                <input
+                    type="file"
+                    id="photoInput"
+                    accept="image/*"
+                    hidden
+                >
+
+                <p id="fileName">
+                    No se ha seleccionado ninguna imagen.
+                </p>
+
+            </div>
+
+
+            <div class="photo-grid">
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 1</span>
+                </div>
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 2</span>
+                </div>
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 3</span>
+                </div>
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 4</span>
+                </div>
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 5</span>
+                </div>
+
+                <div class="photo-box">
+                    <i class="bi bi-image"></i>
+                    <span>Foto 6</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN MANUAL -->
+
+        <section class="manual-section">
+
+            <button
+                type="button"
+                class="btn btn-secondary btn-large"
+                onclick="toggleManualForm()"
+            >
+
+                <i class="bi bi-pencil-square"></i>
+
+                Digitar información manualmente
+
+            </button>
+
+
+            <div
+                id="manualForm"
+                class="manual-form hidden"
+            >
+
+                <div class="manual-form-header">
+
+                    <h2>
+                        Ingrese información de trabajo
+                    </h2>
+
+                    <p>
+                        Complete los datos antes de subir el trabajo.
+                    </p>
+
+                </div>
+
+
+                <form
+                    action="/nuevo-trabajo"
+                    method="POST"
+                >
+
+                    <div class="form-group">
+
+                        <label for="numeroTrabajo">
+                            Número de trabajo
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-hash"></i>
+
+                            <input
+                                type="text"
+                                id="numeroTrabajo"
+                                name="numeroTrabajo"
+                                placeholder="Ingrese número"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="idConexion">
+                            ID de conexión
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-diagram-3"></i>
+
+                            <input
+                                type="text"
+                                id="idConexion"
+                                name="idConexion"
+                                placeholder="Ingrese ID"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="area">
+                            Área
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            <input
+                                type="text"
+                                id="area"
+                                name="area"
+                                placeholder="Ingrese área"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary btn-full"
+                    >
+
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+
+                        Subir a la nube
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<%- include('partials/footer') %>

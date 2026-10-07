@@ -1,0 +1,252 @@
+<%- include('partials/head', { title: 'DISICO | Panel del colaborador' }) %>
+
+<%- include('partials/navigation') %>
+
+<main class="dashboard-page">
+
+    <div class="dashboard-container">
+
+        <!-- ENCABEZADO -->
+
+        <div class="dashboard-header">
+
+            <div>
+
+                <span class="section-tag">
+                    ESPACIO DE TRABAJO
+                </span>
+
+                <h1>
+                    Panel del colaborador
+                </h1>
+
+                <p>
+                    Gestiona tus trabajos y consulta tu información.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <% if (trabajoSubido) { %>
+
+            <div class="alert success dashboard-alert">
+
+                <i class="bi bi-cloud-check-fill"></i>
+
+                Trabajo subido correctamente a la nube.
+
+            </div>
+
+        <% } %>
+
+
+        <!-- IMAGEN -->
+
+        <div class="dashboard-image">
+
+            <img
+                src="/images/disico-panel.jpg"
+                alt="Panel DISICO"
+            >
+
+        </div>
+
+
+        <!-- BOTONES -->
+
+        <div class="dashboard-actions">
+
+            <a href="/perfil" class="btn btn-primary">
+
+                <i class="bi bi-person-circle"></i>
+
+                Mi perfil
+
+            </a>
+
+            <a href="/" class="btn btn-dark">
+
+                <i class="bi bi-box-arrow-right"></i>
+
+                Cerrar sesión
+
+            </a>
+
+        </div>
+
+
+        <!-- INFORMACIÓN -->
+
+        <section class="dashboard-section">
+
+            <div class="info-card">
+
+                <div class="info-card-icon">
+
+                    <i class="bi bi-person-circle"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Mi información
+                    </h3>
+
+                    <p>
+                        <strong>Nombre:</strong>
+                        Samuel Caicedo
+                    </p>
+
+                    <p>
+                        <strong>CC:</strong>
+                        1244893
+                    </p>
+
+                    <p>
+                        <strong>Rol:</strong>
+                        Colaborador
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MOTO -->
+
+            <div class="info-card">
+
+                <div class="info-card-icon">
+
+                    <i class="bi bi-bicycle"></i>
+
+                </div>
+
+                <div>
+
+                    <h3>
+                        Moto asignada
+                    </h3>
+
+                    <p>
+                        Vehículo asignado al colaborador.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ÁREA DE TRABAJOS -->
+
+        <div class="work-area-button">
+
+            <a
+                href="/area-trabajos"
+                class="btn btn-primary btn-large"
+            >
+
+                <i class="bi bi-briefcase-fill"></i>
+
+                Área de trabajos
+
+            </a>
+
+        </div>
+
+
+        <!-- TRABAJOS -->
+
+        <section class="jobs-section">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    MIS TRABAJOS
+                </span>
+
+                <h2>
+                    Trabajos del colaborador
+                </h2>
+
+            </div>
+
+
+            <div class="jobs-grid">
+
+                <div class="job-card">
+
+                    <div class="job-number">
+                        01
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Reconexión Calle 12
+                        </h3>
+
+                        <span class="status pending">
+                            Pendiente
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div class="job-number">
+                        02
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Suspensión Barrio Norte
+                        </h3>
+
+                        <span class="status visited">
+                            Visitado
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="job-card">
+
+                    <div class="job-number">
+                        03
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Instalación Zona Centro
+                        </h3>
+
+                        <span class="status legalized">
+                            Legalizado
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<%- include('partials/footer') %>

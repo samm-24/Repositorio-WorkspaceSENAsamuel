@@ -1,0 +1,186 @@
+<%- include('partials/head', { title: 'DISICO | Impresión' }) %>
+
+<%- include('partials/navigation') %>
+
+<main class="print-page">
+
+    <div class="print-container">
+
+        <a href="/area-trabajos" class="back-button no-print">
+
+            <i class="bi bi-arrow-left"></i>
+
+            Volver
+
+        </a>
+
+
+        <div class="print-header">
+
+            <div class="print-logo">
+
+                <i class="bi bi-lightning-charge-fill"></i>
+
+                <span>DISICO</span>
+
+            </div>
+
+            <span class="section-tag">
+                DOCUMENTO DE TRABAJO
+            </span>
+
+            <h1>
+                PÁGINA DE IMPRESIÓN DISICO
+            </h1>
+
+            <h2>
+                Samuel Caicedo
+            </h2>
+
+            <p>
+                SENA 3188686
+            </p>
+
+        </div>
+
+
+        <!-- SELECTOR -->
+
+        <section class="print-options no-print">
+
+            <div class="section-heading">
+
+                <span class="section-tag">
+                    CONFIGURACIÓN
+                </span>
+
+                <h2>
+                    Opciones de impresión
+                </h2>
+
+            </div>
+
+
+            <div class="quantity-control">
+
+                <label for="imageQuantity">
+                    Cantidad de imágenes:
+                </label>
+
+                <div class="quantity-buttons">
+
+                    <button
+                        type="button"
+                        onclick="changeQuantity(-1)"
+                        aria-label="Reducir cantidad"
+                    >
+                        <i class="bi bi-dash"></i>
+                    </button>
+
+                    <input
+                        type="number"
+                        id="imageQuantity"
+                        value="1"
+                        min="1"
+                        max="20"
+                        readonly
+                    >
+
+                    <button
+                        type="button"
+                        onclick="changeQuantity(1)"
+                        aria-label="Aumentar cantidad"
+                    >
+                        <i class="bi bi-plus"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="printDocument()"
+            >
+
+                <i class="bi bi-printer-fill"></i>
+
+                Imprimir
+
+            </button>
+
+        </section>
+
+
+        <!-- ÁREA DEL DOCUMENTO -->
+
+        <section class="print-document">
+
+            <div class="document-header">
+
+                <h2>
+                    DISICO
+                </h2>
+
+                <p>
+                    Registro de trabajo
+                </p>
+
+            </div>
+
+
+            <div
+                id="printPhotos"
+                class="print-photo-grid"
+            >
+
+                <div class="print-photo-placeholder">
+
+                    <i class="bi bi-image"></i>
+
+                    <span>
+                        Evidencia fotográfica
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="document-data">
+
+                <div>
+                    <strong>
+                        Colaborador:
+                    </strong>
+
+                    Samuel Caicedo
+                </div>
+
+                <div>
+                    <strong>
+                        CC:
+                    </strong>
+
+                    1244893
+                </div>
+
+                <div>
+                    <strong>
+                        SENA:
+                    </strong>
+
+                    3188686
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+<%- include('partials/footer') %>
